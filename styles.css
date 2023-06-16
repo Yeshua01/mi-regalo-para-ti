@@ -1,0 +1,330 @@
+@font-face {
+    font-family: 'Amatic SC';
+    src: url('Amatic_SC/AmaticSC-Bold.ttf') format('opentype');
+}
+
+
+/* Estilos generales */
+body {
+    font-family: 'Baloo 2';
+    margin: 0;
+    padding: 0;
+    background-color: #fef8fb;
+}
+
+/* Estilos imagen */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    border: 2px solid #696cff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+#nomeolvides {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+#childmoon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+#moonstar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+#couplestars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+#hands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 36px;
+    text-align: center;
+}
+
+p {
+    font-family: 'Baloo 2', serif;
+    font-size: 18px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+    font-family: 'Baloo 2';
+}
+
+.container-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #87CEEB;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    list-style-type: none;
+}
+
+.nav-links li a {
+    padding: 8px 24px;
+    border-radius: 20px;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(1, 137, 255, 0.95);
+    border-radius: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.button-menu-toggle {
+    display: none;
+}
+
+/* Estilos de secciones */
+section {
+    margin-top: 20px;
+}
+
+/* Estilos responsivos nav */
+@media (max-width: 768px) {
+    .column {
+        flex: 100%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .button-menu-toggle {
+        display: block;
+        background-color: rgba(1, 137, 255, 0.95);
+        border: none;
+        border-radius: 5px;
+        padding: 0 24px;
+        font-family: monospace;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .nav-links.nav-links-responsive {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 70%;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(110, 179, 239, 0.95);
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 20px;
+
+    }
+
+    .nav-links li a:hover {
+        background-color: rgba(1, 137, 255, 0.95);
+        border-radius: 5px;
+        color: white;
+        /* Cambiar el color del texto al hacer hover */
+    }
+}
+
+/* Estilos responsivos corazon */
+.heart {
+    position: fixed;
+    color: #ff0000;
+    font-size: 24px;
+    pointer-events: none;
+    animation: heartAnimation 2.5s ease-out;
+}
+
+@keyframes heartAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Estilos responsivos para pantallas pequeñas imagen */
+@media (max-width: 768px) {
+    .side-images {
+        display: none;
+    }
+}
+
+@keyframes balloonFall {
+    0% {
+        top: -100px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 100vh;
+        opacity: 0;
+    }
+}
+
+.balloon {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    background-image: url('Imagen1.png');
+    background-size: cover;
+    animation-name: balloonFall;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+footer {
+    background-color: #FFC0CB;
+    /* Color de fondo */
+    padding: 20px;
+    text-align: left;
+    color: #ff0000;
+    /* Color del texto */
+}
+
+.footer-content {
+    display: inline-block;
+}
+
+.movie-ending {
+    animation: fade-in 2s linear;
+
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilos para el botón "Click Me" */
+.button-click {
+    background-color: #f12446;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#mostrar-frases {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff8c94;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#mostrar-frases:hover {
+    background-color: #ff5f6d;
+}
+
+#frase-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#frase-actual {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff8c94;
+}
